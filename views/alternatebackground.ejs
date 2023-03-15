@@ -1,0 +1,54 @@
+<%- include('./components/header.ejs') %>
+
+<style>
+  td {
+  padding: 20px;
+  border: 1px solid black;
+  width: 50rem;
+  height: 10rem;
+}
+</style>
+
+
+
+
+  <div class="container">
+    <table>
+      <tr class="colorcls" >
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="colorcls">
+        <td ></td>
+        <td ></td>
+      </tr>
+      <tr class="colorcls">
+        <td ></td>
+        <td ></td>
+      </tr>
+      <tr class="colorcls">
+        <td ></td>
+        <td ></td>
+      </tr>
+    </table>
+
+  </div>
+
+
+  
+
+
+
+<script>
+  const p_array = document.getElementsByClassName('colorcls');
+    for (let i = 0; i < Math.floor(p_array.length /2) ; i++) {
+      if(i === 0){
+        p_array[0].children[0].style.backgroundColor = "#EA9999";
+      }
+      p_array[2*i + 1 ].children[1].style.backgroundColor = "#EA9999";
+      p_array[2*i + 2 ].children[0].style.backgroundColor = "#EA9999";
+    }
+
+</script>
+
+  <%- include('./components/footer.ejs') %>

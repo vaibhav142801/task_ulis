@@ -1,0 +1,31 @@
+<%- include('./components/header.ejs') %>
+
+    <div class="container pt-5">
+
+
+        <form method="post" action="/imgtotext" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Import image</label>
+                <input required type="file" class="form-control-file" name="image" id="exampleFormControlFile1">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+
+        <div class="container">
+            <div class="card mt-5" style="width: 70rem;">
+                <textarea style="height: 30rem;">
+                    <%= data %>
+                </textarea>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+    <%- include('./components/footer.ejs') %>

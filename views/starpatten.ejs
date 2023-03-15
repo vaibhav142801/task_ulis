@@ -1,0 +1,68 @@
+<%- include('./components/header.ejs') %>
+
+   <h1 id="printpatten">
+      <form method="post" name="myForm" id="myForm">
+         <div class="form-group">
+            <label for="exampleFormControlFile1">number of partten </label>
+            <input type="number" class="form-control-file" name="numtst" id="numtst">
+         </div>
+         <button type="button" id="mybutton" class="btn btn-primary">Submit</button>
+      </form>
+
+   </h1>
+
+
+   <div class="container mt-5" id="innerdiv">
+
+   </div>
+
+
+
+   <script>
+
+
+      document.getElementById("mybutton").addEventListener("click", function () {
+
+
+         const rows = document.forms["myForm"]["numtst"].value
+
+
+         if (!rows) {
+            alert("please enter number");
+            return false;
+         }
+         let pattern = "";
+
+         for (let n = 1; n <= rows; n++) {
+            for (let space = 1; space <= rows - n; space++) {
+               if (space === 1) {
+                  pattern += "&nbsp;";
+               } else {
+                  pattern += "&nbsp; &nbsp;";
+               }
+            }
+
+            for (let num = 1; num <= n; num++) {
+               if (num === 1) {
+                  pattern += "*";
+               } else {
+                  pattern += "**";
+               }
+
+            }
+            pattern += "<br>";
+
+         }
+
+         document.getElementById("innerdiv").
+            innerHTML += pattern;
+      });
+
+
+
+
+
+
+   </script>
+
+   <%- include('./components/footer.ejs') %>

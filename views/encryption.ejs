@@ -1,0 +1,51 @@
+<%- include('./components/header.ejs') %>
+
+<div class="container pt-5">
+  <form method="post" action="/encryption-decryption">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Name</label>
+      <input
+        type="text"
+        value="test Name"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        name="name"
+        placeholder="Enter Name"
+      />
+      <label for="exampleInputEmail1">address</label>
+      <input
+        type="text"
+        class="form-control"
+        value="test Address"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        name="address"
+        placeholder="Enter Address"
+      />
+      <label for="exampleInputEmail1">city</label>
+      <input
+        type="text"
+        class="form-control"
+        value="test City"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        name="city"
+        placeholder="Enter City"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary">create</button>
+  </form>
+
+  <div class="container mt-5">
+    <h4>encryption file =   <%= encrypted.encryptedData %></h4>
+
+    <h4>decryptedfile file = <%= decrypted %> </h4>
+  </div>
+</div>
+
+
+
+
+<%- include('./components/footer.ejs') %>

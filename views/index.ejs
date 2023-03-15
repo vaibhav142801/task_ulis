@@ -1,0 +1,29 @@
+<%- include('./components/header.ejs') %>
+
+<div class="container pt-5">
+
+
+    <form method="post" action="/">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Enter search parameter</label>
+          <input required type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="searchparm" placeholder="Enter search parameter">
+          <small id="emailHelp" class="form-text text-muted">Genrated parameter will search this</small>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+
+
+    <div class="card mt-5" style="width: 18rem;">
+        <img src='<%- Qrcode %>'  class="card-img-top" alt="data">
+      </div>
+
+
+
+
+
+
+</div>
+
+<%- include('./components/footer.ejs') %>
